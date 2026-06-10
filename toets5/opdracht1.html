@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diag JS1  - basis</title>
+    <style>
+        body {
+            font-family: verdana, sans-serif;
+            line-height: 1.8em;
+        }
+        
+        h1, h2 {
+            margin:5px 0;
+        }
+
+        .tblA { border-collapse: collapse; margin:5px 0; }
+        .tblA td, .tblA th {
+            width: 50px;
+            height: 50px;
+            border:1px solid #CCCCCC;
+            padding:5px;
+            text-align: center;
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diag5 JS1 basisoets</h1>
+
+    <h2>Basis HTML voor opdracht 1 en 2</h2>
+    <br>
+    <i>Kopieer broncode via rechtermuisbutton, "View page source" en plak deze in je editor.</i><br>
+    <table class="tblA">
+        <tr>
+            <td id="td1">1</td>
+            <td id="td2">2</td>
+            <td id="td3">3</td>
+        </tr>
+        <tr>
+            <td id="td4">4</td>
+            <td id="td5">5</td>
+            <td id="td6">6</td>
+        </tr>
+        <tr>
+            <td id="td7">7</td>
+            <td id="td8">8</td>
+            <td id="td9">9</td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('td6').innerHTML = 'Cell Six'">Cell Six</button>
+    <button onclick="kleurenveranderen()"> Verander kleur van 1, 5 en 9</button>
+
+    <button onclick="reset()">Zet alles terug</button>
+
+
+    <script>
+         console.log("dit is een melding in de console ");
+
+         function kleurenveranderen() {
+    console.log("kleurenveranderen");
+    let vak1= document.getElementById("td1");
+    let vak2= document.getElementById("td5");
+    let vak3= document.getElementById("td9");
+
+    vak1.style.backgroundColor="red"
+    vak2.style.backgroundColor="yellow"
+    vak3.style.backgroundColor="blue"
+}
+function reset(){
+    for (let i = 1; i <= 9; i++) {
+        document.getElementById("td" + i).style.backgroundColor = "#EEEEEE";
+        document.getElementById("td" + i).style.color = "black";
+        document.getElementById("td" + i).innerHTML = i;   
+    }
+}
+
+    </script>
+</body>
+</html>

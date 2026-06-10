@@ -1,0 +1,32 @@
+
+ #container {
+            background-color: beige;
+            display:flex;
+            
+        }
+
+
+#leftside {
+    background-color:blueviolet;
+    flex: 2;
+    height: 60vh;
+
+
+}
+
+#article {
+     background-color:darkkhaki;
+     flex: 6;
+
+
+}    
+
+#rightside {
+    background-color: chartreuse;
+    flex: 2;
+}
+
+#header {
+    background-color:red;
+    display:flex;
+}

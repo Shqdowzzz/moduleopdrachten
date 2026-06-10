@@ -1,0 +1,60 @@
+.tableA {
+    border-collapse: collapse;
+    
+}
+.tableA td, .tableA th {
+    border: 1px solid navy;
+    padding: 2px 5px;
+
+}
+ body {
+  margin:0;
+  background-color: white;
+  
+ }
+
+    header  {
+        background-color:grey;
+        color: black;
+        justify-content: flex-start;
+        display: flex;
+        height: 15vh;
+      
+  
+    }
+    #container {
+    display: flex;
+    flex-direction: column;
+    
+  
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+    .content {
+    flex: 1;
+    padding: 20px;
+    color:black;
+    
+  }
+  
+
+nav  div  {
+        width: 100px;
+        /* margin: 6px 0 6px 6px;  */
+        background-color: grey;
+        color:black;
+        border:white ;    
+        justify-content: center;  
+        display: flex;
+         border: 1px solid white;
+         
+}
+nav {
+    display:flex;
+    justify-content: flex-end;
+    background-color: gray;
+    height: 8vh;
+    
+}

@@ -1,0 +1,112 @@
+
+{
+    "afdelingen": [
+        {
+            "naam": "Administratie",
+            "functies": [
+                {
+                    "functie": "Typist",
+                    "personen": [
+                        "Debbie Anders",
+                        "Harrie Evers",
+                        "Lidy van Galen",
+                        "Maartje Hamburg"
+                    ]
+                },
+                {
+                    "functie": "Secretaris",
+                    "personen": [
+                        "Sandra Bemelmans",
+                        "Michiel Dessems",
+                        "Marlies Keesing"
+                    ]
+                },
+                {
+                    "functie": "Manager",
+                    "personen": [
+                        "Lodewijk Dieckema",
+                        "Robert-Jan Nieuwveen"
+                    ]
+                },
+                {
+                    "functie": "Onderdirecteur",
+                    "personen": [
+                        "Gerrit Geels",
+                        "Vicky de Gooijer"
+                    ]
+                },
+                {
+                    "functie": "Directeur",
+                    "personen": [
+                        "Rik Zandhuis"
+                    ]
+                }
+            ]
+        },
+        {
+            "naam": "Commercieel",
+            "functies": [
+                {
+                    "functie": "Verkoper",
+                    "personen": [
+                        "Niek Adema",
+                        "Kees van Arkel",
+                        "Henk Biervliet",
+                        "Linda Campers",
+                        "Leo Cohen",
+                        "Sacha Cools",
+                        "Dominique Dannink",
+                        "Theo van Delden",
+                        "Peter der Draaijer",
+                        "Kees Duintjer",
+                        "Michel Ennema",
+                        "Koos Gisbers",
+                        "Paul Harten",
+                        "Jan Jansen",
+                        "Liesbeth Kalkhoven",
+                        "Otto Keesing",
+                        "Linda Koopman",
+                        "Jenneke Laarmans",
+                        "Rik Lieshout",
+                        "Katja van Lodijzen",
+                        "Erik Lorentz",
+                        "Johan Lucassen",
+                        "Johan van Oss",
+                        "Johan Petersen",
+                        "Jaap Poulen",
+                        "Annet de Ridder",
+                        "Berend Roodenburg",
+                        "Joep Sijes",
+                        "Dick Valkenier"
+                    ]
+                },
+                {
+                    "functie": "Manager",
+                    "personen": [
+                        "Danny Pluijmsma"
+                    ]
+                }
+            ]
+        },
+        {
+            "naam": "Buitendienst",
+            "functies": [
+                {
+                    "functie": "Verkoper",
+                    "personen": [
+                        "Cees Louwerse",
+                        "Ellen Michiels",
+                        "Simon de Valk",
+                        "Berend van den Vriesekoop"
+                    ]
+                },
+                {
+                    "functie": "Manager",
+                    "personen": [
+                        "Anneke Sanders"
+                    ]
+                }
+            ]
+        }
+    ]
+}

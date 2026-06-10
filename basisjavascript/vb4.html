@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript basis</title>
+    <style>
+        #demo1 {
+            background-color: #EEEEEE;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo1">Groet eens iemand</div><br>
+    <button onclick="document.getElementById('demo1').innerHTML = 'Hoi ik ben Chris'">groet</button>
+    <button onclick="document.getElementById('demo1').style.backgroundColor = 'lightcoral'">kleur</button>
+
+    <button onclick="a()">tekst-kleur, grootte, en border</button>
+
+    <hr>
+
+    2 knoppen =&gt; 2 acties. Met een <i>function</i> kan het netter en in 1 keer:<br>
+    <button onclick="groetEnKleur()">groet en kleur</button>
+
+    <button onclick="document.getElementById('demo1').innerHTML = 'Groet eens iemand....';
+    document.getElementById('demo1').style = '';
+    ">Zet de tekst terug
+
+    <script>
+        console.log("dit is een melding in de console "); // dit voert hij meteen uit
+        //alert("dit is een alert popup");                  // dit voert hij ook meteen uit
+
+        function groetEnKleur() {            
+            document.getElementById('demo1').innerHTML = 'Hoi ik ben toch iemand anders';
+            document.getElementById('demo1').style.backgroundColor = 'lightblue';
+        }
+         function a() { 
+            document.getElementById('demo1').innerHTML = 'Hoi ik ben Chris';
+            document.getElementById('demo1').style.color = 'red';
+            document.getElementById('demo1').style.fontSize = '22px';
+            document.getElementById('demo1').style.borderRadius = '10px';
+            document.getElementById('demo1').style.border = '3px solid black';
+
+         }
+         
+
+    </script>
+</body>
+</html>

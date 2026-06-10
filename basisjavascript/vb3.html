@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript dialog</title>
+    <style>
+        #dialog {
+            /* dit zet de dialog in het midden van het scherm */
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+            /* dit zet overige eigenschappen van de dialog */
+            width: 300px;
+            height: 200px;
+            background-color: #EEEEEE;
+            border: 1px solid black;
+            padding: 10px;
+
+            /* dit zorgt ervoor als de top veranderd, dit langzaam gaat */
+            transition: top 0.7s ease;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="document.getElementById('dialog').style.top = '50%'">show dialog</button>
+    <button onclick="document.getElementById('dialog').style.top = '-200px'">hide dialog</button>
+
+    <div id="dialog">
+        <div class="dialogHeader">
+            <b>Header dialog</b>      
+        </div>
+        <div class="dialogContent">
+            <p>Dit is een dialog</p>
+        </div>
+    </div>
+</body>
+</html>
+

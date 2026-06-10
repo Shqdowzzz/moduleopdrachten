@@ -1,0 +1,14 @@
+  
+<b><p1>Plaats / tijd</p1></b>
+
+<br><b>Wanneer</b></br>
+<br>za 5 december 2025</br>
+<br>19:30 uur - 21:00 uur</br>
+
+<br><b>Waar</b>
+<br>Deltion college</br>
+<br>Gebouw groen</br>
+<br>Lokaal 2.099</br>
+<br>Mozartlaan 15</br>
+<br>8031 AA Zwolle</br>
+<img src="/toetsfoto/Deltionlogo.png" height="100" width="250"/>

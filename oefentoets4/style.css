@@ -1,0 +1,14 @@
+body {
+    font-family: verdana;
+}
+.tblA {
+    border-collapse: collapse;
+}
+.tblA th, .tblA td {
+    border: 1px solid darkgreen;
+    padding: 2px 7px;
+}
+
+.img-thumbnail {
+    width: 60px;
+}

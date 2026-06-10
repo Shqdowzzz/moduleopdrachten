@@ -1,0 +1,20 @@
+<b><p1>SD Sinterklaas-feestje</p1></b>
+
+<h5>
+    <br>Sinterklaas is weer op weg naar de school!</br>
+En zoals we dit elk jaar (niet) doen, organiseren
+ we een feestje voor de studenten. Deze wordt
+ zoals altijd gehouden in 1 van de lokalen van
+ gebouw groen op de 2de verdieping.
+
+<br>We hopen jou graag te zien voor een gezellige pakjesavond met alle medestudenten.</br>
+
+<br>Meldt je je even aan via het formulier?
+Je kunt aangeven wat jij graag zou willen hebben, maar ook of je wilt meehelpen met het organiseren van het feestje.
+</br>
+
+
+<br>We raden je verder vreselijk af om op dit bericht te reageren omdat dit een fake-feestje is!!</br>
+
+De organisatie-commissie
+</h5>

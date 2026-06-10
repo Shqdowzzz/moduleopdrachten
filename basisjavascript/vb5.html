@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript basis</title>
+    <style>
+        #outputDiv {
+            background-color: #AACCAA;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    Stel:<br>
+    De film "the Matrix" kost €12,50 per persoon. Je gaat er met de klas naar toe.<br>
+    Naam klas: <input type="text" id="klassenaam" placeholder="naam klas" value="SD1C"><br>
+    Aantal studenten: <input type="text" id="xstudenten" placeholder="aantal studenten" value="10"><br>
+
+    
+    <div id="outputDiv">?</div><br>
+    <button onclick="bereken()">bereken de kosten</button>
+    
+    <script>
+        function bereken() {      
+            let naam = document.getElementById('klassenaam').value;
+            let aantal = document.getElementById('xstudenten').value;
+            let filmnaam = "the Matrix";
+            let kosten = 12.50 * aantal;
+            let antwoord = naam + ' gaan met ' + aantal + ' std. naar ' + filmnaam + ' voor € ' + kosten.toFixed(2);
+
+            document.getElementById('outputDiv').innerHTML = antwoord;
+        }
+    </script>
+</body>
+</html>

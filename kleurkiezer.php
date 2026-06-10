@@ -1,0 +1,58 @@
+<?php 
+    if (isset($_GET["kleuren"])) {
+        $kleur = $_GET["kleuren"];
+        //echo $kleur;
+
+        echo "<p style='background-color: $kleur'> het kleur is $kleur</p>";
+    }
+          
+        
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+        <!-- <style>
+		
+		.form input, .form button{
+			margin: 		3px;
+		}
+		label {
+			display: 		inline-block;
+			width:			90px;
+		}
+		#result {
+			background-color: silver;
+			width:			  30%;
+			height:			  200px;
+		}
+    </style> -->
+    
+</head>
+
+<body style='background-color: <?php echo $kleur; ?>'>
+<form action="" method="GET">
+    <select name="kleuren">
+        <option value=" Blue">Blue</option>
+        <option value=" Red">Red</option>
+        <option value=" Yellow">Yellow</option>
+        <option value=" Purple">Purple</option>
+    </select>
+    <input type="submit">
+</form>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

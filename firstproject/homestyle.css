@@ -1,0 +1,46 @@
+nav  div  {
+    width: 100px;
+    justify-content: center;  
+    display: flex;
+     border: 1px solid rgb(15, 15, 15);
+         
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    height: 8vh;
+    outline: 1px solid black;
+     gap: 15px;
+    
+}
+nav h1 {
+    color: black;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    margin:0;
+    background-color: rgb(255, 255, 255);
+}
+
+main {
+    display: block;
+}
+
+footer {
+    font-size: 14px;
+    color: black      
+        }

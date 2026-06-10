@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+ 
+<body>
+    <h1>Javascript-events, -condities en start formvalidatie</h1>
+    <h2>URL: https://std.stegion.nl/_tests/jaar1/formCheckA/ </h2>
+
+    <table>
+        <tr>
+            <td>voornaam: </td>
+            <td>
+                <input type="text" id="vn" onkeyup="checkVoornaam()">
+                <span id="errorVN"></span>
+            </td>
+        
+        </tr>
+        <tr>
+            <td>leeftijd: </td>
+            <td><input type="number" id="lf" onkeyup="checkLeeftijd()"></td>
+        </tr>
+        <tr>
+            <td id="tdKleur">kleur veranderen: </td>
+            <td><input type="text" id="kleurCode" value="#FF0000" onkeyup="wijzigKleur()"></td>
+        </tr>
+    </table>
+   
+    <!-- <button onclick="tafel()">Geef de tafel</button> -->
+    <div id="output">Output</div>
+
+    <script>
+        function checkVoornaam() {
+            //console.log("open checkVoornaam()")
+            let voornaam = document.getElementById("vn").value;
+            let lengteVoornaam = voornaam.length;
+
+            let outputTekst = "Mijn naam is '"+voornaam + "' de lengte is: " + lengteVoornaam
+            console.log(outputTekst);
+            
+            document.getElementById("output").innerHTML = outputTekst;
+            /*
+            if(lengteVoornaam > 10 || lengteVoornaam < 2) {
+                werk zelf verder uit:
+                - dat de input een kleurtje krijgt (goed => lichtgroen,  niet goed =>lichtrood)
+                - zet een melding in de <span> met id="errorVN"
+            }
+            */
+        }
+
+        function checkLeeftijd() {
+            console.log("open onkeyup checkLeeftijd()")
+        }
+
+        function wijzigKleur() {
+            let kCode = document.getElementById("kleurCode").value
+            //console.log("kCode = "+kCode)
+            document.getElementById("tdKleur").style.backgroundColor = kCode
+        }
+    </script>
+</body>
+
+</html>

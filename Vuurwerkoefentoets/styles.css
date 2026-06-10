@@ -1,0 +1,80 @@
+.tableA {
+    border-collapse: collapse;
+    
+}
+.tableA td, .tableA th {
+    border: 1px solid navy;
+    padding: 2px 5px;
+
+}
+ body {
+  margin:0;
+  
+ }
+
+    header  {
+        background-color:gray;
+        color: white;
+        justify-content: center;
+        display: flex;
+        height: 15vh;
+      
+  
+    }
+    #container {
+    display: flex;
+    flex-direction: column;
+    
+  
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+    .content {
+    flex: 1;
+    padding: 20px;
+    color:black;
+    
+  }
+
+  /* footer {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 20px;
+    background-color: black;
+    color:white;
+    align-items: center;
+     */
+    footer {
+  position: fixed;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  
+
+nav  div  {
+        width: 100px;
+        margin: 6px 0 6px 6px; 
+        background-color: white;
+        color:white;
+        border:white ;    
+        justify-content: center;  
+        display: flex;
+         border: 1px solid white;
+         
+}
+nav {
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    height: 8vh;
+    
+}

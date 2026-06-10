@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Landen</h1>
+<div id="out_table">hier komen de landen</div>
+
+    <script>
+
+        function fLaadUsers_fetch() {
+            let url = "https://restcountries.com/v3.1/all?fields=name,capital,currencies,borders,region,flags"
+            // let land = document.getElementById("land").value;
+            // let url = "https://restcountries.com/v3.1/name" + land;
+    fetch(url)
+        .then(data => data.json())
+        .then(json => {
+            console.log(json);
+            // document.getElementById("out_table").src = json [0].flags.png;
+            fJson2Html(json);
+        })
+        .catch(error => {
+            console.error("Fout bij laden users.json:", error);
+        });
+}
+
+function fJson2Html(json) {
+    let table = "<table class='tblA txt_sm'>";
+    table += "<tr>";
+        table += "<th>werelddeel</th>";
+        table += "<th>naam</th>";
+        // table += "<th>currency</th>";
+        table += "<th>hoofdstad</th>";
+        table += "<th>buurlanden</th>";
+        table += "<th>vlaggen</th>";
+    table += "</tr>";
+    for (let i = 0; i < json.length; i++) {
+        table += "<tr>";
+            table += "<td>" + json[i].region + "</td>";
+            table += "<td>" + json[i].name.common + "</td>";
+            // table += "<td>" + json[i].currencies.name + "</td>";
+            table += "<td>" + json[i].capital + "</td>";
+            table += "<td>" + json[i].borders + "</td>";
+            table += "<td><img src='" + json[i].flags.png + "'width='50'></td>";
+        table += "</tr>";
+    }
+    table += "</table>";
+
+    const out = document.getElementById("out_table");
+    if (out) out.innerHTML = table;
+}
+
+fLaadUsers_fetch();
+
+    </script>
+    
+    
+</body>
+</html>

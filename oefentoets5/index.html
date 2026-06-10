@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diag JS1 Oefentoets - basis</title>
+
+    <link rel="stylesheet" href="style.css?v=2">
+
+    
+</head>
+<body>
+    <h1>Diag JS1 Oefentoets - vlaggen</h1>
+
+
+    <div class="vlag">
+        <div id="color1" onclick="document.getElementById('color1').style.backgroundColor='red'"class="kleur"></div>
+        <div id="color2" class="kleur"></div>
+        <div id="color3" class="kleur"></div>
+    </div>
+    <input type="text" onkeyup="document.getElementById('color1').style.backgroundColor = this.value">
+    <input type="text" onkeyup="document.getElementById('color2').style.backgroundColor = this.value">
+    <input type="text" onkeyup="document.getElementById('color3').style.backgroundColor = this.value">
+    <button onclick="kleurenveranderen()"> Kleuren veranderen</button>
+
+<div id="landNaam"></div>
+
+<button onclick="toonVlag(0)">NL</button>
+<button onclick="toonVlag(1)">BE</button>
+<button onclick="toonVlag(2)">DE</button>
+
+    <script>
+// let NL_kleur1 = "red";
+// let NL_kleur2 = "white";
+// let NL_kleur3 = "blue";
+
+// let BE_kleur1 = "black";
+// let BE_kleur2 = "yellow";
+// let BE_kleur3 = "red";
+
+// let DE_kleur1 = "black";
+// let DE_kleur2 = "red";
+// let DE_kleur3 = "gold";
+
+function kleurenveranderen() {
+    console.log("kleurenveranderen");
+    let vak1= document.getElementById("color1");
+    let vak2= document.getElementById("color2");
+    let vak3= document.getElementById("color3");
+
+    vak1.style.backgroundColor="green"
+    vak2.style.backgroundColor="yellow"
+    vak3.style.backgroundColor="purple"
+}
+
+///////
+
+
+
+let vlaggegevens = [
+    ["NL", "red", "white", "blue"],
+    ["BE", "black", "yellow", "red"],
+    ["DE", "black", "red", "gold"]
+];
+
+function toonVlag(index) {
+
+    let vak1 = document.getElementById("color1");
+    let vak2 = document.getElementById("color2");
+    let vak3 = document.getElementById("color3");
+
+    let vakken = [vak1, vak2, vak3];
+
+    // for-loop van 0 t/m 2
+    for (let i = 0; i < 3; i++) {
+        vakken[i].style.backgroundColor = vlaggegevens[index][i + 1];
+    }
+
+    // landnaam tonen
+    document.getElementById("landNaam").innerHTML = vlaggegevens[index][0];
+}
+</script>
+
+
+ </script>
+ </body>
+
+    <div class="opdracht">  
+        <h2>Opdracht 0</h2>
+        <ul>
+            <li>Kopieer de HTML en CSS van deze pagina (rechtermuisknop -> "view page source") en zet hem op je eigen computer.</li>
+            <li>zet de css in een apart bestand en link die naar de html file.<br>Wis de opdrachten divs en gbruik het verder voor opbouw van jouw eigen oefentoets.</li>
+        </ul>
+    </div>
+    
+    <div class="opdracht">  
+        <h2>Opdracht 1</h2>
+        <ul>
+            <li>Zorg ervoor dat als je op de bovenste kleur klikt, deze rood wordt.</li>
+            <li>Maak een button "kleuren veranderen" die met de gegeven JS variabelen, alle kleuren van de vlag verandert.</li>
+            <li>Maak 3 input type="text" vakken, waarin je de (css) kleurnaam kan typen en die met een onKeyUp event die kleur de vlag kunnen veranderen.</li>
+        </ul>
+        <button onclick="kleurenVeranderen()">kleuren veranderen</button>
+    </div>
+
+    <div class="opdracht">  
+        <h2>Opdracht 2</h2>
+        Er staan ook andere vlag-kleuren gedeclareerd in de JS variabelen.
+        <ul>
+            <li>Maak 3 buttons met landnamen (NL, BE, DE) die de kleuren van de vlag veranderen.</li>
+            <li>Zorg dat de naam van het land dynamisch in een div onder de vlag komen te staan.</li>
+            <li>maak een for-loop van 0 tot 2 en zorg dat het land in elke kleur van de vlag komt te staan.</li>
+            <li>in de map "img" staan deze afbeeldingen van de vlaggen: vlag_bulgarije.png, vlag_hongarije.png, vlag_duitsland.png, vlag_nederland.png, vlag_belgie.png. <br>
+                gebruik deze om de vlag te maken.</li>
+            <li>Zet de gegevens in een array zoals hieronder
+                <code>
+                    let vlaggegevens = [
+                        [ "NL", "red", "white", "blue" ],
+                        [ "BE", "black", "yellow", "red" ],
+                        [ "DE", "black", "red", "gold" ]
+                    ];
+                </code>
+                Gebruik deze array in een for-loop om de kleuren van de vlag te veranderen.
+            </li>
+            <li>Maak een loop door de array heen en zorg dat er 3 vlaggen komen te staan.</li>
+        </ul>
+    </div>
+
+    <div class="opdracht">  
+        <h2>Opdracht 3</h2>
+        <ul>
+            <li>Maak een inlogformulier met een username en password veld en een login button.</li>
+            <li>Maak een function "inloggen" die de username en password vergelijkt met de gegeven de JS variabelen (let uname="iemand" en let pass="geheim"). geef een alert met "inloggen gelukt" of "inloggen mislukt".</li>
+            <li>Maak een array met de username en password combinaties van de gebruikers. en test die</li>
+            <li>Zorg ervoor dat de inlogformulier met een animatie verdwijnt uit beeld als het inloggen gelukt is. Niet gelukt? Laat het formulier staan en voeg dynamisch, een rode error message toe onder de button.</li>
+        </ul>
+    </div>
+
+   
+    <script>
+        let NL_kleur1 = "red";
+        let NL_kleur2 = "white";
+        let NL_kleur3 = "blue";
+
+        let BE_kleur1 = "black";
+        let BE_kleur2 = "yellow";
+        let BE_kleur3 = "red";
+        
+        let DE_kleur1 = "black";
+        let DE_kleur2 = "red";
+        let DE_kleur3 = "gold";
+        
+        function kleurenVeranderen() {
+            console.log("kleurenVeranderen");
+        }
+    </script>
+</body>
+</html>

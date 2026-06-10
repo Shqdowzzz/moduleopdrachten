@@ -1,0 +1,67 @@
+ body {
+  margin:0;
+ }
+
+nav  div  {
+        margin: 6px 0 6px 6px;     
+        justify-content: center;  
+        display: flex;
+         border: 10px solid blue;
+         width: 100vh;
+         color: black;
+
+
+         
+         
+         
+}
+nav {
+    display:flex;
+    justify-content: center;
+    height: 80vh;
+    color:black;
+    /* border:blue; */
+    
+    
+}
+
+
+footer {
+    justify-content: flex-end;
+    background-color: blue;
+    color: white;
+    display: flex;
+}
+
+content {
+    background-color: lightskyblue;
+}
+div {
+    background-color: lightblue;
+}
+header {
+    background-color: blue;       
+    position: relative;           
+    height: 120px;                
+    display: flex;
+    justify-content: center;      
+    align-items: center;          
+}
+
+header img {
+    position: absolute;           
+    top: 0;
+    left: 0;
+    height: 100px;                
+}
+
+.header-tekst {
+    text-align: center;           
+    width: 100%;                  
+    color: white;
+    background-color: blue;
+}
+
+
+
+

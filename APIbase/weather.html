@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather API</title>
+
+<style>
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border:1px solid black;
+    padding:8px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Weer Zwolle</h1>
+
+<div id="out">Hier komt de data</div>
+
+<script>
+
+function fLaadAPI() {
+
+let url = "https://api.openweathermap.org/data/2.5/weather?q=Zwolle&units=metric&appid=71d0471f2e754ba225c5308614ca12e4";
+
+    fetch(url)
+    .then(data => data.json())
+    .then(json => {
+        console.log("weather:", json);
+        fJson2table(json);
+    })
+    .catch(error => {
+        console.error("Fout bij laden van API:", error);
+    });
+
+}
+
+function getWindArrow(deg){
+
+    if (deg >= 337.5 || deg < 22.5) return "↑";
+    if (deg >= 22.5 && deg < 67.5) return "↗";
+    if (deg >= 67.5 && deg < 112.5) return "→";
+    if (deg >= 112.5 && deg < 157.5) return "↘";
+    if (deg >= 157.5 && deg < 202.5) return "↓";
+    if (deg >= 202.5 && deg < 247.5) return "↙";
+    if (deg >= 247.5 && deg < 292.5) return "←";
+    if (deg >= 292.5 && deg < 337.5) return "↖";
+
+
+}
+fLaadAPI();
+
+
+ 
+function fJson2table(json) {
+
+let arrow = getWindArrow(json.wind.deg);
+
+let table = "<table>";
+
+    table += "<tr>";
+    table += "<th>Stad</th>";
+    table += "<th>Temperatuur</th>";
+    table += "<th>Gevoelstemperatuur</th>";
+    table += "<th>Weer</th>";
+    table += "<th>Wind richting</th>";
+    table += "</tr>";
+
+// html += json[0].naam+" ("+json[0].brouwer+")"
+
+    for (let i = 0; i < json.weather.length; i++) {
+    table += "<tr>";
+    table += "<td>" + json.name + "</td>";
+    table += "<td>" + json.main.temp + " °C</td>";
+    table += "<td>" + json.main.feels_like + " °C</td>";
+    table += "<td>" + json.weather[i].description + "</td>";
+    table += "<td>" + arrow + "</td>";
+    table += "</tr>";
+    }
+
+    table += "</table>";
+
+const out = document.getElementById("out");
+    if (out) out.innerHTML = table;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css?v=2">
+    
+</head>
+<body>
+    <h1>Opdrachten</h1>
+<div id="out_table">Opdracht 1</div>
+
+    <script>
+
+        function fLaadUsers_fetch() {
+            let url = "http://localhost/moduleopdrachten/APIbasetoets6/json/pers_genest.json"
+           
+    fetch(url)
+        .then(data => data.json())
+        .then(json => {
+            console.log(json);
+           
+            fJson2Html(json);
+        })
+        .catch(error => {
+            console.error("Fout bij laden users.json:", error);
+        });
+}
+
+function fJson2Html(json) {
+    let table = "<table class='tblA txt_sm'>";
+    table += "<tr>";
+        table += "<th>afdeling</th>";
+         table += "<th>Naam</th>";
+         table += "<th>Invoeg</th>";
+          table += "<th>Achternaam</th>";
+          table += "<th>Salaris</th>";
+    
+    table += "</tr>";
+    for (let i = 0; i < json.length; i++) {
+        table += "<tr>";
+            table += "<td>" + json[i].naam.functies + "</td>";
+            table += "<td>" + json[i].naam.commericeel + "</td>";
+            table += "<td>" + json[i].invoeg + "</td>";
+            table += "<td>" + json[i].achternaam + "</td>";
+            table += "<td>" + json[i].salaris + "   € </td>";
+            
+
+
+         
+        table += "</tr>";
+    }
+    table += "</table>";
+
+    const out = document.getElementById("out_table");
+    if (out) out.innerHTML = table;
+}
+
+fLaadUsers_fetch();
+
+    </script>
+    
+
+
+    
+
+    
+</body>
+</html>

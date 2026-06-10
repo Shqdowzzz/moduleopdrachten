@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Test formulier</h2>
+
+<form id="mijnForm">
+
+<label>Naam*:</label>
+<input type="text" id="naam"><br>
+
+<label>Adres*:</label>
+<input type="text" id="adres"><br>
+
+<label>Postcode*:</label>
+<input type="text" id="postcode"><br>
+
+<label>Plaats*:</label>
+<input type="text" id="plaats"><br>
+
+<label>Telefoon:</label>
+<input type="text" id="telefoon"><br>
+
+<label>Email:</label>
+<input type="email" id="email"><br>
+
+<label>Geslacht:</label>
+<label><input type="radio" name="geslacht"> Vrouw</label>
+<label><input type="radio" name="geslacht"> Man</label><br>
+
+<label>Boyband:</label>
+<select id="boyband">
+<option value="">-- kies --</option>
+<option>K3</option>
+<option>Backstreet Boys</option>
+<option>NSYNC</option>
+<option>One Direction</option>
+</select><br>
+
+<label>Geboortedatum:</label>
+<input type="date" id="geboortedatum"><br>
+
+<button type="submit">Verstuur</button></br>
+
+</form>
+
+<div id="fouten" class="error"></div>
+
+<div id="fouten" class="error"></div>
+
+<script>
+document.getElementById("mijnForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let fouten = [];
+  if (document.getElementById("naam").value.trim() === "")
+    fouten.push("naam mag niet leeg zijn");
+
+  if (document.getElementById("adres").value.trim() === "")
+    fouten.push("adres mag niet leeg zijn");
+
+  if (document.getElementById("postcode").value.trim() === "")
+    fouten.push("postcode mag niet leeg zijn");
+
+  if (document.getElementById("plaats").value.trim() === "")
+    fouten.push("plaats mag niet leeg zijn");
+
+  document.getElementById("fouten").innerHTML =
+    fouten.length ? "<b>Foutmeldingen:</b><br>" + fouten.join("<br>") : "Formulier is goed ingevuld!";
+});
+</script>
+
+
+</body>
+</html>

@@ -9,7 +9,10 @@
     <div class="buttons"><a href="index.php?page=home">Home</a></div>
     <div><a href="index.php?page=studie">Studie</a></div>
     <div><a href="index.php?page=zorg">Zorg</a></div>
-    <div><a href="help.html">Hulp</a></div>
+    <div><a href="index.php?page=financien">Financiën</a></div>
+    <div><a href="index.php?page=wonen">Wonen</a></div>
+    <div><a href="index.php?page=werk">Werk</a></div>
+    <div><a href="index.php?page=vervoer">Vervoer</a></div>
 </nav>
 
 <div id="container">
